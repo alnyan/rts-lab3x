@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="comparisons">
+        <item>&gt;</item>
+        <item>&lt;</item>
+    </string-array>
+    <string-array name="deadline_type">
+        <item>Time</item>
+        <item>Iteration</item>
+    </string-array>
+</resources>
