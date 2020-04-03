@@ -54,11 +54,11 @@ class MainActivity : AppCompatActivity() {
         // Reset weights
         ws = arrayOf(0.0, 0.0)
 
-        val isIterationBased = limit_type_spinner.selectedItemPosition == 0
+        val isIterationBased = limit_type_spinner.selectedItemPosition != 0
         var round = 0
         val startTime = System.currentTimeMillis()
         var failure = true
-
+     
         while (true) {
             val currTime = System.currentTimeMillis()
             if (!isIterationBased && (currTime - startTime) >= deadlineValue * 1000) {
