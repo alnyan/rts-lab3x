@@ -58,7 +58,7 @@ class MainActivity : AppCompatActivity() {
         var round = 0
         val startTime = System.currentTimeMillis()
         var failure = true
-     
+
         while (true) {
             val currTime = System.currentTimeMillis()
             if (!isIterationBased && (currTime - startTime) >= deadlineValue * 1000) {
@@ -92,7 +92,9 @@ class MainActivity : AppCompatActivity() {
         // Which basically means we failed to pick a good weight combo
         if (failure) {
             ws = arrayOf(0.0, 0.0)
-            Toast.makeText(this, "Training failed", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "Training failed in $round iterations", Toast.LENGTH_SHORT).show()
+        } else {
+            Toast.makeText(this, "Took $round iterations", Toast.LENGTH_SHORT).show()
         }
 
         updateEquation()
